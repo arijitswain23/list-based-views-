@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <title>school_list</title>
-</head>
-<body>
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+    <title>SchoolList</title>
+{% endblock %}
+{% block body_block %}
     <center>
         <h1>School List</h1>
 
         {% for sc in schools %}
 
-            <h2>{{sc.sname}}</h2>
+        <a href="{{sc.pk}}"><h2>{{sc.sname}}</h2></a>
         {% endfor %}
     </center>
-</body>
-</html>
+{% endblock %}
